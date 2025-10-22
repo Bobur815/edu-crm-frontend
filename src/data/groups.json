@@ -1,0 +1,5 @@
+[
+{ "id": 1, "title": "FE-101 Morning", "courseId": 1, "teacherId": 1, "schedule": "Mon/Wed 10:00", "capacity": 16, "enrolled": 12, "status": "ongoing" },
+{ "id": 2, "title": "BE-201 Evening", "courseId": 2, "teacherId": 2, "schedule": "Tue/Thu 19:00", "capacity": 18, "enrolled": 18, "status": "completed" },
+{ "id": 3, "title": "DS-301 Weekend", "courseId": 3, "teacherId": 2, "schedule": "Sat 14:00", "capacity": 20, "enrolled": 7, "status": "planned" }
+]
