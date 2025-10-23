@@ -1,5 +1,0 @@
-[
-{ "id": 1, "title": "Frontend Fundamentals", "category": "Web Dev", "durationMinutes": 540, "price": 1200000, "status": "active" },
-{ "id": 2, "title": "Backend with Node.js", "category": "Web Dev", "durationMinutes": 720, "price": 1500000, "status": "active" },
-{ "id": 3, "title": "Data Structures", "category": "CS", "durationMinutes": 480, "price": 1100000, "status": "draft" }
-]

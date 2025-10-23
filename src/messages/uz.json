@@ -1,0 +1,163 @@
+{
+  "sidebar": {
+    "dashboard": "Boshqaruv paneli",
+    "students": "Talabalar", 
+    "teachers": "O'qituvchilar",
+    "courses": "Kurslar",
+    "groups": "Guruhlar"
+  },
+  "dashboard": {
+    "title": "Boshqaruv paneli",
+    "students": "Talabalar",
+    "teachers": "O'qituvchilar", 
+    "courses": "Kurslar",
+    "groups": "Guruhlar"
+  },
+  "students": {
+    "title": "Talabalar",
+    "addStudent": "Talaba qo'shish",
+    "fullName": "To'liq ismi",
+    "phone": "Telefon",
+    "email": "Elektron pochta",
+    "status": "Holati",
+    "enrolledCourses": "Ro'yxatdan o'tgan kurslar"
+  },
+  "teachers": {
+    "title": "O'qituvchilar",
+    "addTeacher": "O'qituvchi qo'shish",
+    "fullName": "To'liq ismi",
+    "department": "Bo'lim", 
+    "phone": "Telefon",
+    "email": "Elektron pochta",
+    "status": "Holati"
+  },
+  "courses": {
+    "title": "Kurslar",
+    "addCourse": "Kurs qo'shish",
+    "name": "Kurs nomi",
+    "category": "Kategoriya",
+    "duration": "Davomiyligi",
+    "price": "Narxi",
+    "status": "Holati"
+  },
+  "groups": {
+    "title": "Guruhlar", 
+    "createGroup": "Guruh yaratish",
+    "addGroup": "Guruh qo'shish",
+    "name": "Guruh nomi",
+    "course": "Kurs",
+    "teacher": "O'qituvchi", 
+    "schedule": "Jadval",
+    "capacity": "Sig'imi",
+    "enrolled": "Ro'yxatdan o'tgan",
+    "status": "Holati"
+  },
+  "addStudentForm": {
+    "fullName": "To'liq ismi",
+    "phone": "Telefon",
+    "email": "Elektron pochta",
+    "status": "Holati",
+    "statusActive": "Faol",
+    "statusInactive": "Nofaol",
+    "enrollments": "Ro'yxatdan o'tishlar"
+  },
+  "addTeacherForm": {
+    "fullName": "To'liq ismi",
+    "department": "Bo'lim",
+    "phone": "Telefon", 
+    "email": "Elektron pochta",
+    "status": "Holati",
+    "statusActive": "Faol",
+    "statusInactive": "Nofaol"
+  },
+  "addCourseForm": {
+    "title": "Kurs nomi",
+    "category": "Kategoriya",
+    "duration": "Davomiyligi (daqiqalarda)",
+    "price": "Narxi",
+    "status": "Holati",
+    "statusActive": "Faol",
+    "statusDraft": "Qoralama",
+    "statusArchived": "Arxivlangan"
+  },
+  "addGroupForm": {
+    "title": "Guruh nomi",
+    "course": "Kurs",
+    "teacher": "O'qituvchi",
+    "schedule": "Jadval",
+    "capacity": "Sig'imi",
+    "enrolled": "Ro'yxatdan o'tgan",
+    "status": "Holati",
+    "statusPlanned": "Rejalashtirilgan",
+    "statusOngoing": "Davom etayotgan", 
+    "statusCompleted": "Yakunlangan"
+  },
+  "common": {
+    "save": "Saqlash",
+    "cancel": "Bekor qilish",
+    "edit": "Tahrirlash",
+    "delete": "O'chirish",
+    "close": "Yopish",
+    "submit": "Yuborish",
+    "add": "Qo'shish",
+    "create": "Yaratish",
+    "update": "Yangilash",
+    "search": "Qidirish",
+    "filter": "Filtr",
+    "actions": "Amallar",
+    "loading": "Yuklanmoqda...",
+    "noData": "Ma'lumot mavjud emas",
+    "error": "Xatolik yuz berdi",
+    "success": "Operatsiya muvaffaqiyatli"
+  },
+  "tableHeaders": {
+    "fullName": "To'liq ismi",
+    "title": "Nomi",
+    "category": "Kategoriya", 
+    "department": "Bo'lim",
+    "phone": "Telefon",
+    "email": "Elektron pochta",
+    "duration": "Davomiyligi",
+    "price": "Narxi",
+    "course": "Kurs",
+    "teacher": "O'qituvchi",
+    "schedule": "Jadval", 
+    "capacity": "Sig'imi",
+    "enrolled": "Ro'yxatdan o'tgan",
+    "status": "Holati"
+  },
+  "status": {
+    "active": "Faol",
+    "inactive": "Nofaol",
+    "draft": "Qoralama",
+    "archived": "Arxivlangan",
+    "planned": "Rejalashtirilgan",
+    "ongoing": "Davom etayotgan",
+    "completed": "Yakunlangan"
+  },
+  "navbar": {
+    "home": "Bosh sahifa",
+    "about": "Biz haqimizda",
+    "services": "Xizmatlar",
+    "rooms": "Xonalar",
+    "blog": "Blog",
+    "contact": "Bog'lanish",
+    "login": "Kirish",
+    "tagline": "Sihatgohi",
+    "Are_you_Sure?": "Ishonchingiz komilmi?",
+    "profile": "Profil",
+    "logout": "Chiqish",
+    "logging_out": "Chiqilmoqda..."
+  },
+    "login": {
+        "email": "Elektron pochta",
+        "password": "Parol",
+        "forgotPassword": "Parolni unutdingizmi?",
+        "noAccount": "Hisobingiz yo'qmi?",
+        "registerHere": "Bu yerdan ro'yxatdan o'ting",
+        "loginButton": "Kirish",
+        "loggingIn": "Kirish...",
+        "login": "Kirish",
+        "reset": "Qayta tiklash"
+    }
+}

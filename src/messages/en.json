@@ -1,0 +1,165 @@
+{
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "students": "Students", 
+    "teachers": "Teachers",
+    "courses": "Courses",
+    "groups": "Groups"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "students": "Students",
+    "teachers": "Teachers", 
+    "courses": "Courses",
+    "groups": "Groups"
+  },
+  "students": {
+    "title": "Students",
+    "addStudent": "Add Student",
+    "fullName": "Full Name",
+    "phone": "Phone",
+    "email": "Email",
+    "status": "Status",
+    "enrolledCourses": "Enrolled Courses"
+  },
+  "teachers": {
+    "title": "Teachers",
+    "addTeacher": "Add Teacher",
+    "fullName": "Full Name",
+    "department": "Department", 
+    "phone": "Phone",
+    "email": "Email",
+    "status": "Status"
+  },
+  "courses": {
+    "title": "Courses",
+    "addCourse": "Add Course",
+    "name": "Course Name",
+    "category": "Category",
+    "duration": "Duration",
+    "price": "Price",
+    "status": "Status"
+  },
+  "groups": {
+    "title": "Groups", 
+    "createGroup": "Create Group",
+    "addGroup": "Add Group",
+    "name": "Group Name",
+    "course": "Course",
+    "teacher": "Teacher", 
+    "schedule": "Schedule",
+    "capacity": "Capacity",
+    "enrolled": "Enrolled",
+    "status": "Status"
+  },
+  "addStudentForm": {
+    "fullName": "Full Name",
+    "phone": "Phone",
+    "email": "Email",
+    "status": "Status",
+    "statusActive": "Active",
+    "statusInactive": "Inactive",
+    "enrollments": "Enrollments"
+  },
+  "addTeacherForm": {
+    "fullName": "Full Name",
+    "department": "Department",
+    "phone": "Phone", 
+    "email": "Email",
+    "status": "Status",
+    "statusActive": "Active",
+    "statusInactive": "Inactive"
+  },
+  "addCourseForm": {
+    "title": "Course Title",
+    "category": "Category",
+    "duration": "Duration (minutes)",
+    "price": "Price",
+    "status": "Status",
+    "statusActive": "Active",
+    "statusDraft": "Draft",
+    "statusArchived": "Archived"
+  },
+  "addGroupForm": {
+    "title": "Group Title",
+    "course": "Course",
+    "teacher": "Teacher",
+    "schedule": "Schedule",
+    "capacity": "Capacity",
+    "enrolled": "Enrolled",
+    "status": "Status",
+    "statusPlanned": "Planned",
+    "statusOngoing": "Ongoing", 
+    "statusCompleted": "Completed"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "close": "Close",
+    "submit": "Submit",
+    "add": "Add",
+    "create": "Create",
+    "update": "Update",
+    "search": "Search",
+    "filter": "Filter",
+    "actions": "Actions",
+    "loading": "Loading...",
+    "noData": "No data available",
+    "error": "Error occurred",
+    "success": "Operation successful"
+  },
+  "tableHeaders": {
+    "fullName": "Full Name",
+    "title": "Title",
+    "category": "Category", 
+    "department": "Department",
+    "phone": "Phone",
+    "email": "Email",
+    "duration": "Duration",
+    "price": "Price",
+    "course": "Course",
+    "teacher": "Teacher",
+    "schedule": "Schedule", 
+    "capacity": "Capacity",
+    "enrolled": "Enrolled",
+    "status": "Status"
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "draft": "Draft",
+    "archived": "Archived",
+    "planned": "Planned",
+    "ongoing": "Ongoing",
+    "completed": "Completed"
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "rooms": "Rooms",
+    "services": "Services",
+    "blog": "Blog",
+    "contact": "Contact",
+    "login": "Login",
+    "tagline": "Sanatorium",
+    "Are_you_Sure?": "Are you sure?",
+    "profile": "Profile",
+    "logout": "Logout",
+    "logging_out": "Logging out..."
+  },
+  "login": {
+    "email": "Email",
+    "password": "Password",
+    "rememberMe": "Remember Me",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "Don't have an account? Sign Up",
+    "loginButton": "Login",
+    "invalidCredentials": "Invalid email or password",
+    "loading": "Logging in...",
+    "login": "Login",
+    "reset": "Reset"
+
+  }
+}

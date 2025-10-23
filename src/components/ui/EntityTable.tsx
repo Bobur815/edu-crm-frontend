@@ -1,6 +1,7 @@
 'use client';
 import * as React from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TableSortLabel, TextField } from '@mui/material';
+import { useTranslations } from 'next-intl';
 
 
 export type Column<T> = {
@@ -10,7 +11,9 @@ export type Column<T> = {
 };
 
 
-export default function EntityTable<T extends Record<string, any>>({ rows, columns }: { rows: T[]; columns: Column<T>[]; }) {
+export default function EntityTable<T extends Record<string, any>>({ rows, columns, loading }: { rows: T[]; columns: Column<T>[]; loading: boolean; }) {
+    const t = useTranslations('entityTable');
+
     const [orderBy, setOrderBy] = React.useState<string>('');
     const [order, setOrder] = React.useState<'asc' | 'desc'>('asc');
     const [q, setQ] = React.useState('');
@@ -34,11 +37,18 @@ export default function EntityTable<T extends Record<string, any>>({ rows, colum
         });
     }, [rows, q, orderBy, order]);
 
+    if (loading) {
+        return (
+            <Paper sx={{ p: 2, borderRadius: 3 }}>
+                <div>Loading...</div>
+            </Paper>
+        );
+    }
 
     return (
         <Paper sx={{ p: 2, borderRadius: 3 }}>
             <div className="mb-3">
-                <TextField size="small" placeholder="Search…" fullWidth value={q} onChange={e => setQ(e.target.value)} />
+                <TextField size="small" placeholder={t('search')} fullWidth value={q} onChange={e => setQ(e.target.value)} />
             </div>
             <TableContainer>
                 <Table size="small">

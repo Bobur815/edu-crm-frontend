@@ -1,4 +1,0 @@
-[
-{ "id": 1, "fullName": "Azizbek Davronov", "department": "Web Dev", "phone": "+998 97 111 22 33", "email": "aziz@example.com", "status": "active" },
-{ "id": 2, "fullName": "Muhammad Ali", "department": "CS", "phone": "+998 90 234 56 78", "email": "mali@example.com", "status": "active" }
-]

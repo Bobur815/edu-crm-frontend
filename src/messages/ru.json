@@ -1,0 +1,164 @@
+{
+  "sidebar": {
+    "dashboard": "Панель управления",
+    "students": "Студенты", 
+    "teachers": "Преподаватели",
+    "courses": "Курсы",
+    "groups": "Группы"
+  },
+  "dashboard": {
+    "title": "Панель управления",
+    "students": "Студенты",
+    "teachers": "Преподаватели", 
+    "courses": "Курсы",
+    "groups": "Группы"
+  },
+  "students": {
+    "title": "Студенты",
+    "addStudent": "Добавить студента",
+    "fullName": "Полное имя",
+    "phone": "Телефон",
+    "email": "Электронная почта",
+    "status": "Статус",
+    "enrolledCourses": "Записанные курсы"
+  },
+  "teachers": {
+    "title": "Преподаватели",
+    "addTeacher": "Добавить преподавателя",
+    "fullName": "Полное имя",
+    "department": "Отдел", 
+    "phone": "Телефон",
+    "email": "Электронная почта",
+    "status": "Статус"
+  },
+  "courses": {
+    "title": "Курсы",
+    "addCourse": "Добавить курс",
+    "name": "Название курса",
+    "category": "Категория",
+    "duration": "Продолжительность",
+    "price": "Цена",
+    "status": "Статус"
+  },
+  "groups": {
+    "title": "Группы", 
+    "createGroup": "Создать группу",
+    "addGroup": "Добавить группу",
+    "name": "Название группы",
+    "course": "Курс",
+    "teacher": "Преподаватель", 
+    "schedule": "Расписание",
+    "capacity": "Вместимость",
+    "enrolled": "Записано",
+    "status": "Статус"
+  },
+  "addStudentForm": {
+    "fullName": "Полное имя",
+    "phone": "Телефон",
+    "email": "Электронная почта",
+    "status": "Статус",
+    "statusActive": "Активный",
+    "statusInactive": "Неактивный",
+    "enrollments": "Записи"
+  },
+  "addTeacherForm": {
+    "fullName": "Полное имя",
+    "department": "Отдел",
+    "phone": "Телефон", 
+    "email": "Электронная почта",
+    "status": "Статус",
+    "statusActive": "Активный",
+    "statusInactive": "Неактивный"
+  },
+  "addCourseForm": {
+    "title": "Название курса",
+    "category": "Категория",
+    "duration": "Продолжительность (в минутах)",
+    "price": "Цена",
+    "status": "Статус",
+    "statusActive": "Активный",
+    "statusDraft": "Черновик",
+    "statusArchived": "Архивированный"
+  },
+  "addGroupForm": {
+    "title": "Название группы",
+    "course": "Курс",
+    "teacher": "Преподаватель",
+    "schedule": "Расписание",
+    "capacity": "Вместимость",
+    "enrolled": "Записано",
+    "status": "Статус",
+    "statusPlanned": "Запланировано",
+    "statusOngoing": "В процессе", 
+    "statusCompleted": "Завершено"
+  },
+  "common": {
+    "save": "Сохранить",
+    "cancel": "Отменить",
+    "edit": "Редактировать",
+    "delete": "Удалить",
+    "close": "Закрыть",
+    "submit": "Отправить",
+    "add": "Добавить",
+    "create": "Создать",
+    "update": "Обновить",
+    "search": "Поиск",
+    "filter": "Фильтр",
+    "actions": "Действия",
+    "loading": "Загрузка...",
+    "noData": "Нет данных",
+    "error": "Произошла ошибка",
+    "success": "Операция выполнена успешно"
+  },
+  "tableHeaders": {
+    "fullName": "Полное имя",
+    "title": "Название",
+    "category": "Категория", 
+    "department": "Отдел",
+    "phone": "Телефон",
+    "email": "Электронная почта",
+    "duration": "Продолжительность",
+    "price": "Цена",
+    "course": "Курс",
+    "teacher": "Преподаватель",
+    "schedule": "Расписание", 
+    "capacity": "Вместимость",
+    "enrolled": "Записано",
+    "status": "Статус"
+  },
+  "status": {
+    "active": "Активный",
+    "inactive": "Неактивный",
+    "draft": "Черновик",
+    "archived": "Архивированный",
+    "planned": "Запланировано",
+    "ongoing": "В процессе",
+    "completed": "Завершено"
+  },
+  "navbar":{
+    "home": "Главная",
+    "about": "О нас",
+    "services": "Услуги",
+    "rooms": "Номера",
+    "blog": "Блог",
+    "contact": "Контакты",
+    "login": "Войти",
+    "tagline": "Санаторий",
+    "Are_you_Sure?": "Вы уверены?",
+    "profile": "Профиль",
+    "logout": "Выйти",
+    "logging_out": "Выход..."
+  },
+    "login": {
+        "email": "Электронная почта",
+        "password": "Пароль",
+        "showPassword": "Показать пароль",
+        "hidePassword": "Скрыть пароль",
+        "rememberMe": "Запомнить меня",
+        "forgotPassword": "Забыли пароль?",
+        "loginButton": "Войти",
+        "noAccount": "Нет аккаунта? Зарегистрируйтесь",
+        "login": "Войти",
+        "reset": ""
+    }
+}

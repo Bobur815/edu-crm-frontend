@@ -18,21 +18,7 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "*"
-      ],
-      "@/components/*": [
-        "components/*"
-      ],
-      "@/lib/*": [
-        "lib/*"
-      ],
-      "@/types": [
-        "types/index.ts"
-      ],
-      "@/data/*": [
-        "data/*"
-      ]
+      "@/*": ["src/*"]
     },
     "incremental": true,
     "plugins": [
@@ -46,7 +32,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "next.config.mjs"  ],
   "exclude": [
     "node_modules"
   ]
