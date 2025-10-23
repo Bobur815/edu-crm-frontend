@@ -1,10 +1,10 @@
 'use client';
 
-import PageHeader from 'src/components/ui/PageHeader';
-import StatCard from 'src/components/ui/StatCard';
 import { Grid2 as Grid } from '@mui/material';
 import { useTranslations } from 'next-intl';
 import { useDashboardCounts } from '@/features/stats/useDashboardCounts';
+import PageHeader from '@/components/ui/PageHeader';
+import StatCard from '@/components/ui/StatCard';
 
 export default function DashboardPage() {
   const t = useTranslations('dashboard');
