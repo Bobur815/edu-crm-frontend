@@ -37,12 +37,12 @@ export default function BranchesPage() {
   });
 
   const columns: Column<Branch>[] = [
-    { key: 'name', header: t('columns.name') ?? 'Name' },
-    { key: 'region', header: t('columns.region') ?? 'Region' },
-    { key: 'district', header: t('columns.district') ?? 'District' },
-    { key: 'phone', header: t('columns.phone') ?? 'Phone' },
-    { key: 'address', header: t('columns.address') ?? 'Address' },
-    { key: 'status', header: t('columns.status') ?? 'Status', render: (r) => <StatusChip value={r.status} /> },
+    { key: 'name', header: t('name') ?? 'Name' },
+    { key: 'region', header: t('region') ?? 'Region' },
+    { key: 'district', header: t('district') ?? 'District' },
+    { key: 'phone', header: t('phone') ?? 'Phone' },
+    { key: 'address', header: t('address') ?? 'Address' },
+    { key: 'status', header: t('status') ?? 'Status', render: (r) => <StatusChip value={r.status} /> },
   ];
 
   const openDrawer = () => {
@@ -76,7 +76,7 @@ export default function BranchesPage() {
         <div className="text-red-600 text-sm mb-3">{String((error as any)?.message ?? 'Failed to load')}</div>
       ) : null}
 
-      <EntityTable rows={rows} columns={columns} loading={isLoading || createMut.isPending} />
+      <EntityTable data={rows} columns={columns} loading={isLoading || createMut.isPending} />
 
       <RightDrawer
         title={t('addBranch')}

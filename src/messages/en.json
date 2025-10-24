@@ -4,23 +4,41 @@
     "students": "Students", 
     "teachers": "Teachers",
     "courses": "Courses",
-    "groups": "Groups"
+    "groups": "Groups",
+    "branches": "Branches",
+    "profile": "Profile",
+    "settings": "Settings"
   },
   "dashboard": {
     "title": "Dashboard",
     "students": "Students",
     "teachers": "Teachers", 
     "courses": "Courses",
-    "groups": "Groups"
+    "groups": "Groups",
+    "save":"Save",
+    "loading":"Loading..."
   },
   "students": {
     "title": "Students",
     "addStudent": "Add Student",
     "fullName": "Full Name",
     "phone": "Phone",
+    "gender": "Gender",
     "email": "Email",
+    "birthday": "Birthday",
     "status": "Status",
-    "enrolledCourses": "Enrolled Courses"
+    "branch": "Branch",
+    "enrolledCourses": "Enrolled Courses",
+    "statusActive": "Active",
+    "statusInactive": "Inactive",
+    "enrollments": "Enrollments",
+    "genderMale": "Male",
+    "genderFemale": "Female",
+    "genderOther": "Other",
+    "photo": "Photo",
+    "otherDetails": "Other Details",
+    "otherDetailsHint": "You can add additional information about the student here."
+    
   },
   "teachers": {
     "title": "Teachers",
@@ -29,7 +47,18 @@
     "department": "Department", 
     "phone": "Phone",
     "email": "Email",
-    "status": "Status"
+    "status": "Status",
+    "statusActive": "Active",
+    "statusInactive": "Inactive",
+    "branch": "Branch",
+    "gender": "Gender",
+    "genderMale": "Male",
+    "genderFemale": "Female",
+    "genderOther": "Other",
+    "birthday": "Birthday",
+    "photo": "Photo",
+    "otherDetails": "Other Details",
+    "otherDetailsHint": "You can add additional information about the teacher here."
   },
   "courses": {
     "title": "Courses",
@@ -38,7 +67,16 @@
     "category": "Category",
     "duration": "Duration",
     "price": "Price",
-    "status": "Status"
+    "status": "Status",
+    "statusActive": "Active",
+    "statusInactive": "Inactive",
+    "statusDraft": "Draft",
+    "statusArchived": "Archived",
+    "branch": "Branch",
+    "durationHours": "Duration (Hours)",
+    "durationMonths": "Duration (Months)",
+    "description": "Description",
+    "descriptionHint": "Provide a brief description of the course."
   },
   "groups": {
     "title": "Groups", 
@@ -50,47 +88,20 @@
     "schedule": "Schedule",
     "capacity": "Capacity",
     "enrolled": "Enrolled",
-    "status": "Status"
-  },
-  "addStudentForm": {
-    "fullName": "Full Name",
-    "phone": "Phone",
-    "email": "Email",
-    "status": "Status",
-    "statusActive": "Active",
-    "statusInactive": "Inactive",
-    "enrollments": "Enrollments"
-  },
-  "addTeacherForm": {
-    "fullName": "Full Name",
-    "department": "Department",
-    "phone": "Phone", 
-    "email": "Email",
-    "status": "Status",
-    "statusActive": "Active",
-    "statusInactive": "Inactive"
-  },
-  "addCourseForm": {
-    "title": "Course Title",
-    "category": "Category",
-    "duration": "Duration (minutes)",
-    "price": "Price",
-    "status": "Status",
-    "statusActive": "Active",
-    "statusDraft": "Draft",
-    "statusArchived": "Archived"
-  },
-  "addGroupForm": {
-    "title": "Group Title",
-    "course": "Course",
-    "teacher": "Teacher",
-    "schedule": "Schedule",
-    "capacity": "Capacity",
-    "enrolled": "Enrolled",
     "status": "Status",
     "statusPlanned": "Planned",
     "statusOngoing": "Ongoing", 
-    "statusCompleted": "Completed"
+    "statusCompleted": "Completed",
+    "branch": "Branch",
+    "days": "Days",
+    "time": "Time",
+    "dates": "Dates",
+    "startTime": "Start Time",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "room": "Room",
+    "statusActive": "Active",
+    "statusInactive": "Inactive"
   },
   "common": {
     "save": "Save",
@@ -161,5 +172,40 @@
     "login": "Login",
     "reset": "Reset"
 
+  },
+  "entityTable": {
+    "search": "Search..."
+  },
+  "branches":{
+    "title": "Branches",
+    "addBranch": "Add Branch",
+    "name": "Name",
+    "region": "Region",
+    "district": "District",
+    "phone": "Phone",
+    "address": "Address",
+    "status": "Status",
+    "statusActive": "Active",
+    "statusInactive": "Inactive"
+  },
+  "settings": {
+    "title": "Settings",
+    "courses": "Courses",
+    "courseCategories": "Course Categories",
+    "rooms": "Rooms"
+  },
+  "rooms": {
+    "title": "Rooms",
+    "addRoom": "Add Room",
+    "name": "Room Name",
+    "branch": "Branch",
+    "capacity": "Capacity",
+    "people": "people"
+  },
+  "courseCategories": {
+    "title": "Course Categories",
+    "addCategory": "Add Category",
+    "name": "Category Name",
+    "branch": "Branch"
   }
 }

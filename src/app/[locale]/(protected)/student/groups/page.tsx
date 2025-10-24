@@ -108,7 +108,7 @@ export default function GroupsPage() {
         </div>
       ) : null}
 
-      <EntityTable rows={rows} columns={columns} loading={isLoading || createMut.isPending} />
+      <EntityTable data={rows} columns={columns} loading={isLoading || createMut.isPending} />
 
       <RightDrawer
         title={t('addGroup')}

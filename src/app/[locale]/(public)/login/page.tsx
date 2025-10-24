@@ -50,7 +50,7 @@ export default function LoginPage() {
       api.defaults.headers.common.Authorization = `Bearer ${data.accessToken}`;
 
       // redirect to a concrete, protected page (no bare "/")
-      router.replace(`/${locale}`);
+      router.replace(`/`);
       // optional: ensure server revalidation
       // router.refresh();
     } catch (_err) {

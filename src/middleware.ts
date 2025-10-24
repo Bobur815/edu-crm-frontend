@@ -1,27 +1,36 @@
 import { NextRequest, NextResponse } from 'next/server';
-import createMiddleware from 'next-intl/middleware';
-import { routing } from '@/i18n/routing';
+import { decodeJwt, roleToPanel } from '@/lib/api/auth';
+import { ACCESS_COOKIE } from './lib/tokens';
+import { JwtPayload } from './types';
+import createIntlMiddleware from 'next-intl/middleware';
+import { routing } from './i18n/routing';
 
-const intl = createMiddleware(routing);
+// Protected routes pattern that includes locale prefix
+const PROTECTED = /^\/(?:en|uz|ru)\/(?:admin|teacher|student)(?:\/.*)?$/i;
+const LOGIN_PATTERN = /^\/(?:en|uz|ru)\/login$/i;
+
+// Create the intl middleware
+const intlMiddleware = createIntlMiddleware(routing);
 
 export function middleware(req: NextRequest) {
-  const url = req.nextUrl;
-  const pathname = url.pathname;
-  const cookie = req.cookies.get('educrm_access')?.value;
+  const { pathname, origin } = req.nextUrl;
+  const token = req.cookies.get(ACCESS_COOKIE)?.value;
 
-  // Let "/" be handled by app/page.tsx (it will redirect to /<defaultLocale>)
-  // So no redirect here for "/"
-
-  // Protect app area: add routes you want guarded
-  const localePattern = `(${routing.locales.join('|')})`;
-  const protectedPattern = new RegExp(`^/${localePattern}/(students|teachers|courses|groups|branches)(/.*)?$`, 'i');
-
-  if (protectedPattern.test(pathname) && !cookie) {
-    const locale = pathname.split('/')[1] || routing.defaultLocale;
-    return NextResponse.redirect(new URL(`/${locale}/login`, url));
+  // Handle login redirect when user is already authenticated
+  if (LOGIN_PATTERN.test(pathname) && token) {
+    const role = decodeJwt<JwtPayload>(token)?.role;
+    const locale = pathname.split('/')[1]; // Extract locale from path
+    return NextResponse.redirect(new URL(`/${locale}/${roleToPanel(role)}`, origin));
   }
 
-  return intl(req);
+  // Handle protected routes
+  if (PROTECTED.test(pathname) && !token) {
+    const locale = pathname.split('/')[1]; // Extract locale from path
+    return NextResponse.redirect(new URL(`/${locale}/login`, origin));
+  }
+
+  // Apply internationalization middleware
+  return intlMiddleware(req);
 }
 
 export const config = {

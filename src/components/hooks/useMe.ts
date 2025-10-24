@@ -6,7 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 import { api } from "@/lib/axios";
 import { ACCESS } from "@/lib/tokens";
 import type { AxiosError } from "axios";
-import type { UserRole } from "@/types/User";
+import { UserRole } from "@/types";
 
 // Foydalanuvchi ma'lumotining minimal shakli
 export type MeBase = { id: string | number; role?: UserRole } & Record<string, unknown>;
@@ -32,7 +32,6 @@ function normalizeMe(payload: unknown): MeBase | null {
 }
 
 export function useMe() {
-  // Token bor-yo‘qligini faqat clientda tekshiramiz
   const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
@@ -46,7 +45,7 @@ export function useMe() {
     enabled,
     queryFn: async () => {
       try {
-        const { data } = await api.get<unknown>("/users/me");
+        const { data } = await api.get<unknown>("/auth/me");
         return normalizeMe(data);
       } catch (err: unknown) {
         const ax = err as AxiosError<unknown> | undefined;

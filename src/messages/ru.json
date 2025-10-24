@@ -4,23 +4,41 @@
     "students": "Студенты", 
     "teachers": "Преподаватели",
     "courses": "Курсы",
-    "groups": "Группы"
+    "groups": "Группы",
+    "branches": "Филиалы",
+    "profile": "Профиль",
+    "settings": "Настройки"
   },
   "dashboard": {
     "title": "Панель управления",
     "students": "Студенты",
     "teachers": "Преподаватели", 
     "courses": "Курсы",
-    "groups": "Группы"
+    "groups": "Группы",
+    "save": "Сохранить",
+    "loading": "Загрузка..."
   },
   "students": {
     "title": "Студенты",
     "addStudent": "Добавить студента",
     "fullName": "Полное имя",
     "phone": "Телефон",
+    "gender": "Пол",
     "email": "Электронная почта",
+    "birthday": "День рождения",
     "status": "Статус",
-    "enrolledCourses": "Записанные курсы"
+    "branch": "Филиал",
+    "enrolledCourses": "Записанные курсы",
+    "statusActive": "Активный",
+    "statusInactive": "Неактивный",
+    "enrollments": "Записи",
+    "genderMale": "Мужской",
+    "genderFemale": "Женский",
+    "genderOther": "Другой",
+    "photo": "Фото",
+    "otherDetails": "Дополнительные данные",
+    "otherDetailsHint": "Здесь вы можете добавить дополнительную информацию о студенте."
+    
   },
   "teachers": {
     "title": "Преподаватели",
@@ -29,7 +47,18 @@
     "department": "Отдел", 
     "phone": "Телефон",
     "email": "Электронная почта",
-    "status": "Статус"
+    "status": "Статус",
+    "statusActive": "Активный",
+    "statusInactive": "Неактивный",
+    "branch": "Филиал",
+    "gender": "Пол",
+    "genderMale": "Мужской",
+    "genderFemale": "Женский",
+    "genderOther": "Другой",
+    "birthday": "День рождения",
+    "photo": "Фото",
+    "otherDetails": "Дополнительные данные",
+    "otherDetailsHint": "Здесь вы можете добавить дополнительную информацию о преподавателе."
   },
   "courses": {
     "title": "Курсы",
@@ -38,7 +67,16 @@
     "category": "Категория",
     "duration": "Продолжительность",
     "price": "Цена",
-    "status": "Статус"
+    "status": "Статус",
+    "statusActive": "Активный",
+    "statusInactive": "Неактивный",
+    "statusDraft": "Черновик",
+    "statusArchived": "Архивированный",
+    "branch": "Филиал",
+    "durationHours": "Продолжительность (часы)",
+    "durationMonths": "Продолжительность (месяцы)",
+    "description": "Описание",
+    "descriptionHint": "Предоставьте краткое описание курса."
   },
   "groups": {
     "title": "Группы", 
@@ -50,47 +88,20 @@
     "schedule": "Расписание",
     "capacity": "Вместимость",
     "enrolled": "Записано",
-    "status": "Статус"
-  },
-  "addStudentForm": {
-    "fullName": "Полное имя",
-    "phone": "Телефон",
-    "email": "Электронная почта",
-    "status": "Статус",
-    "statusActive": "Активный",
-    "statusInactive": "Неактивный",
-    "enrollments": "Записи"
-  },
-  "addTeacherForm": {
-    "fullName": "Полное имя",
-    "department": "Отдел",
-    "phone": "Телефон", 
-    "email": "Электронная почта",
-    "status": "Статус",
-    "statusActive": "Активный",
-    "statusInactive": "Неактивный"
-  },
-  "addCourseForm": {
-    "title": "Название курса",
-    "category": "Категория",
-    "duration": "Продолжительность (в минутах)",
-    "price": "Цена",
-    "status": "Статус",
-    "statusActive": "Активный",
-    "statusDraft": "Черновик",
-    "statusArchived": "Архивированный"
-  },
-  "addGroupForm": {
-    "title": "Название группы",
-    "course": "Курс",
-    "teacher": "Преподаватель",
-    "schedule": "Расписание",
-    "capacity": "Вместимость",
-    "enrolled": "Записано",
     "status": "Статус",
     "statusPlanned": "Запланировано",
     "statusOngoing": "В процессе", 
-    "statusCompleted": "Завершено"
+    "statusCompleted": "Завершено",
+    "branch": "Филиал",
+    "days": "Дни",
+    "time": "Время",
+    "dates": "Даты",
+    "startTime": "Время начала",
+    "startDate": "Дата начала",
+    "endDate": "Дата окончания",
+    "room": "Аудитория",
+    "statusActive": "Активный",
+    "statusInactive": "Неактивный"
   },
   "common": {
     "save": "Сохранить",
@@ -135,11 +146,11 @@
     "ongoing": "В процессе",
     "completed": "Завершено"
   },
-  "navbar":{
+  "navbar": {
     "home": "Главная",
     "about": "О нас",
+    "rooms": "Комнаты",
     "services": "Услуги",
-    "rooms": "Номера",
     "blog": "Блог",
     "contact": "Контакты",
     "login": "Войти",
@@ -149,16 +160,52 @@
     "logout": "Выйти",
     "logging_out": "Выход..."
   },
-    "login": {
-        "email": "Электронная почта",
-        "password": "Пароль",
-        "showPassword": "Показать пароль",
-        "hidePassword": "Скрыть пароль",
-        "rememberMe": "Запомнить меня",
-        "forgotPassword": "Забыли пароль?",
-        "loginButton": "Войти",
-        "noAccount": "Нет аккаунта? Зарегистрируйтесь",
-        "login": "Войти",
-        "reset": ""
-    }
+  "login": {
+    "email": "Электронная почта",
+    "password": "Пароль",
+    "rememberMe": "Запомнить меня",
+    "forgotPassword": "Забыли пароль?",
+    "noAccount": "Нет аккаунта? Регистрация",
+    "loginButton": "Войти",
+    "invalidCredentials": "Неверный email или пароль",
+    "loading": "Вход в систему...",
+    "login": "Войти",
+    "reset": "Сброс"
+
+  },
+  "entityTable": {
+    "search": "Поиск..."
+  },
+  "branches":{
+    "title": "Филиалы",
+    "addBranch": "Добавить филиал",
+    "name": "Название",
+    "region": "Регион",
+    "district": "Район",
+    "phone": "Телефон",
+    "address": "Адрес",
+    "status": "Статус",
+    "statusActive": "Активный",
+    "statusInactive": "Неактивный"
+  },
+  "settings": {
+    "title": "Настройки",
+    "courses": "Курсы",
+    "courseCategories": "Категории курсов",
+    "rooms": "Комнаты"
+  },
+  "rooms": {
+    "title": "Комнаты",
+    "addRoom": "Добавить комнату",
+    "name": "Название комнаты",
+    "branch": "Филиал",
+    "capacity": "Вместимость",
+    "people": "человек"
+  },
+  "courseCategories": {
+    "title": "Категории курсов",
+    "addCategory": "Добавить категорию",
+    "name": "Название категории",
+    "branch": "Филиал"
+  }
 }

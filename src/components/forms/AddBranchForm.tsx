@@ -17,7 +17,7 @@ export default function AddBranchForm({
   value: BranchFormValue;
   onChange: (v: BranchFormValue) => void;
 }) {
-  const t = useTranslations('addBranchForm');
+  const t = useTranslations('branches');
 
   const set = (k: keyof BranchFormValue) => (e: React.ChangeEvent<HTMLInputElement>) =>
     onChange({ ...value, [k]: e.target.value });

@@ -42,12 +42,12 @@ export default function TeachersPage() {
   });
 
   const columns: Column<Teacher>[] = [
-    { key: 'fullname', header: t('columns.fullname') ?? 'Full name' },
-    { key: 'phone', header: t('columns.phone') ?? 'Phone' },
-    { key: 'email', header: t('columns.email') ?? 'Email' },
-    { key: 'gender', header: t('columns.gender') ?? 'Gender' },
-    { key: 'branchId', header: t('columns.branch') ?? 'Branch' },
-    { key: 'status', header: t('columns.status') ?? 'Status', render: (r) => <StatusChip value={r.status} /> },
+    { key: 'fullname', header: t('fullName') ?? 'Full name' },
+    { key: 'phone', header: t('phone') ?? 'Phone' },
+    { key: 'email', header: t('email') ?? 'Email' },
+    { key: 'gender', header: t('gender') ?? 'Gender' },
+    { key: 'branchId', header: t('branch') ?? 'Branch' },
+    { key: 'status', header: t('status') ?? 'Status', render: (r) => <StatusChip value={r.status} /> },
   ];
 
   const openDrawer = () => {
@@ -88,7 +88,7 @@ export default function TeachersPage() {
         <div className="text-red-600 text-sm mb-3">{String((error as any)?.message ?? 'Failed to load')}</div>
       ) : null}
 
-      <EntityTable rows={rows} columns={columns} loading={isLoading || createMut.isPending} />
+      <EntityTable data={rows} columns={columns} loading={isLoading || createMut.isPending} />
 
       <RightDrawer
         title={t('addTeacher')}

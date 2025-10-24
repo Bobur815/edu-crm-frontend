@@ -15,7 +15,7 @@ export default function AddGroupForm({
   value: GroupFormValue;
   onChange: (v: GroupFormValue) => void;
 }) {
-  const t = useTranslations('addGroupForm');
+  const t = useTranslations('groups');
 
   const set = (k: keyof GroupFormValue) => (e: React.ChangeEvent<HTMLInputElement>) =>
     onChange({ ...value, [k]: e.target.value });

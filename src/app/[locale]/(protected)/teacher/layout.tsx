@@ -1,21 +1,20 @@
-// src/app/[locale]/(app)/layout.tsx
+import { cookies } from 'next/headers';
+import { redirect } from 'next/navigation';
+import { decodeJwt, roleToPanel } from '@/lib/api/auth';
 import { Container } from '@mui/material';
 import Sidebar from '@/components/layout/Sidebar';
 import Topbar from '@/components/layout/Topbar';
-import { cookies } from 'next/headers';
-import { redirect } from 'next/navigation';
 import { ACCESS_COOKIE } from '@/lib/tokens';
+import { JwtPayload } from '@/types';
 
-export default function AppShellLayout({
-  children,
-  params,
-}: {
-  children: React.ReactNode;
-  params: { locale: string };
-}) {
+export default function TeacherLayout({ children }: { children: React.ReactNode }) {
   const token = cookies().get(ACCESS_COOKIE)?.value;
-  if (!token) {
-    redirect(`/${params.locale}/login`);
+  if (!token) return redirect('/login');
+
+  const role = decodeJwt<JwtPayload>(token)?.role;
+  if (roleToPanel(role) !== 'teacher') {
+    // logged in but wrong panel -> send to their own
+    return redirect(`/${roleToPanel(role)}`);
   }
 
   return (

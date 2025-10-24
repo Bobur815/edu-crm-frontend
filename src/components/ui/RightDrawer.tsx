@@ -5,6 +5,7 @@ import {
   Drawer, IconButton, Stack, Typography, Divider, Box, Button
 } from "@mui/material";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
+import { useTranslations } from "next-intl";
 
 type RightDrawerProps = {
   title: string;
@@ -18,8 +19,9 @@ type RightDrawerProps = {
 };
 
 export default function RightDrawer({
-  title, open, onClose, onSubmit, submitLabel = "Saqlash", children, width = 420, submitting
+  title, open, onClose, onSubmit, children, width = 420, submitting
 }: RightDrawerProps) {
+  const t = useTranslations('dashboard');
   return (
     <Drawer
       anchor="right"
@@ -35,7 +37,7 @@ export default function RightDrawer({
       <Box sx={{ p: 2, overflowY: "auto", flex: 1 }}>{children}</Box>
       <Divider />
       <Box sx={{ p: 2 }}>
-        <Button fullWidth variant="contained" onClick={onSubmit}>{submitLabel}</Button>
+        <Button fullWidth variant="contained" onClick={onSubmit}>{submitting ? t('loading') : t('save')}</Button>
       </Box>
     </Drawer>
   );

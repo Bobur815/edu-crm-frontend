@@ -4,23 +4,41 @@
     "students": "Talabalar", 
     "teachers": "O'qituvchilar",
     "courses": "Kurslar",
-    "groups": "Guruhlar"
+    "groups": "Guruhlar",
+    "branches": "Filiallar",
+    "profile": "Profil",
+    "settings": "Sozlamalar"
   },
   "dashboard": {
     "title": "Boshqaruv paneli",
     "students": "Talabalar",
     "teachers": "O'qituvchilar", 
     "courses": "Kurslar",
-    "groups": "Guruhlar"
+    "groups": "Guruhlar",
+    "save":"Saqlash",
+    "loading":"Yuklanmoqda..."
   },
   "students": {
     "title": "Talabalar",
     "addStudent": "Talaba qo'shish",
     "fullName": "To'liq ismi",
     "phone": "Telefon",
+    "gender": "Jins",
     "email": "Elektron pochta",
+    "birthday": "Tug'ilgan sana",
     "status": "Holati",
-    "enrolledCourses": "Ro'yxatdan o'tgan kurslar"
+    "branch": "Filial",
+    "enrolledCourses": "Ro'yxatdan o'tgan kurslar",
+    "statusActive": "Faol",
+    "statusInactive": "Nofaol",
+    "enrollments": "Ro'yxatdan o'tishlar",
+    "genderMale": "Erkak",
+    "genderFemale": "Ayol",
+    "genderOther": "Boshqa",
+    "photo": "Rasm",
+    "otherDetails": "Boshqa ma'lumotlar",
+    "otherDetailsHint": "You can add additional information about the student here."
+    
   },
   "teachers": {
     "title": "O'qituvchilar",
@@ -29,7 +47,18 @@
     "department": "Bo'lim", 
     "phone": "Telefon",
     "email": "Elektron pochta",
-    "status": "Holati"
+    "status": "Holati",
+    "statusActive": "Faol",
+    "statusInactive": "Nofaol",
+    "branch": "Filial",
+    "gender": "Jins",
+    "genderMale": "Erkak",
+    "genderFemale": "Ayol",
+    "genderOther": "Boshqa",
+    "birthday": "Tug'ilgan sana",
+    "photo": "Rasm",
+    "otherDetails": "Boshqa ma'lumotlar",
+    "otherDetailsHint": "You can add additional information about the teacher here."
   },
   "courses": {
     "title": "Kurslar",
@@ -38,7 +67,16 @@
     "category": "Kategoriya",
     "duration": "Davomiyligi",
     "price": "Narxi",
-    "status": "Holati"
+    "status": "Holati",
+    "statusActive": "Faol",
+    "statusInactive": "Nofaol",
+    "statusDraft": "Qoralama",
+    "statusArchived": "Arxivlangan",
+    "branch": "Filial",
+    "durationHours": "Davomiyligi (soatlar)",
+    "durationMonths": "Davomiyligi (oylar)",
+    "description": "Tavsif",
+    "descriptionHint": "Provide a brief description of the course."
   },
   "groups": {
     "title": "Guruhlar", 
@@ -50,47 +88,20 @@
     "schedule": "Jadval",
     "capacity": "Sig'imi",
     "enrolled": "Ro'yxatdan o'tgan",
-    "status": "Holati"
-  },
-  "addStudentForm": {
-    "fullName": "To'liq ismi",
-    "phone": "Telefon",
-    "email": "Elektron pochta",
-    "status": "Holati",
-    "statusActive": "Faol",
-    "statusInactive": "Nofaol",
-    "enrollments": "Ro'yxatdan o'tishlar"
-  },
-  "addTeacherForm": {
-    "fullName": "To'liq ismi",
-    "department": "Bo'lim",
-    "phone": "Telefon", 
-    "email": "Elektron pochta",
-    "status": "Holati",
-    "statusActive": "Faol",
-    "statusInactive": "Nofaol"
-  },
-  "addCourseForm": {
-    "title": "Kurs nomi",
-    "category": "Kategoriya",
-    "duration": "Davomiyligi (daqiqalarda)",
-    "price": "Narxi",
-    "status": "Holati",
-    "statusActive": "Faol",
-    "statusDraft": "Qoralama",
-    "statusArchived": "Arxivlangan"
-  },
-  "addGroupForm": {
-    "title": "Guruh nomi",
-    "course": "Kurs",
-    "teacher": "O'qituvchi",
-    "schedule": "Jadval",
-    "capacity": "Sig'imi",
-    "enrolled": "Ro'yxatdan o'tgan",
     "status": "Holati",
     "statusPlanned": "Rejalashtirilgan",
     "statusOngoing": "Davom etayotgan", 
-    "statusCompleted": "Yakunlangan"
+    "statusCompleted": "Yakunlangan",
+    "branch": "Filial",
+    "days": "Kunlar",
+    "time": "Vaqt",
+    "dates": "Sanalar",
+    "startTime": "Boshlanish vaqti",
+    "startDate": "Boshlanish sanasi",
+    "endDate": "Tugash sanasi",
+    "room": "Xona",
+    "statusActive": "Faol",
+    "statusInactive": "Nofaol"
   },
   "common": {
     "save": "Saqlash",
@@ -138,26 +149,63 @@
   "navbar": {
     "home": "Bosh sahifa",
     "about": "Biz haqimizda",
-    "services": "Xizmatlar",
     "rooms": "Xonalar",
+    "services": "Xizmatlar",
     "blog": "Blog",
-    "contact": "Bog'lanish",
+    "contact": "Aloqa",
     "login": "Kirish",
-    "tagline": "Sihatgohi",
+    "tagline": "Sanatoriy",
     "Are_you_Sure?": "Ishonchingiz komilmi?",
     "profile": "Profil",
     "logout": "Chiqish",
     "logging_out": "Chiqilmoqda..."
   },
-    "login": {
-        "email": "Elektron pochta",
-        "password": "Parol",
-        "forgotPassword": "Parolni unutdingizmi?",
-        "noAccount": "Hisobingiz yo'qmi?",
-        "registerHere": "Bu yerdan ro'yxatdan o'ting",
-        "loginButton": "Kirish",
-        "loggingIn": "Kirish...",
-        "login": "Kirish",
-        "reset": "Qayta tiklash"
-    }
+  "login": {
+    "email": "Elektron pochta",
+    "password": "Parol",
+    "rememberMe": "Meni eslab qoling",
+    "forgotPassword": "Parolni unutdingizmi?",
+    "noAccount": "Hisobingiz yo'qmi? Ro'yxatdan o'ting",
+    "loginButton": "Kirish",
+    "invalidCredentials": "Noto'g'ri email yoki parol",
+    "loading": "Kirilmoqda...",
+    "login": "Kirish",
+    "reset": "Qayta o'rnatish"
+
+  },
+  "entityTable": {
+    "search": "Qidirish..."
+  },
+  "branches":{
+    "title": "Filiallar",
+    "addBranch": "Filial qo'shish",
+    "name": "Nomi",
+    "region": "Viloyat",
+    "district": "Tuman",
+    "phone": "Telefon",
+    "address": "Manzil",
+    "status": "Holati",
+    "statusActive": "Faol",
+    "statusInactive": "Nofaol"
+  },
+  "settings": {
+    "title": "Sozlamalar",
+    "courses": "Kurslar",
+    "courseCategories": "Kurs toifalari",
+    "rooms": "Xonalar"
+  },
+  "rooms": {
+    "title": "Xonalar",
+    "addRoom": "Xona qo'shish",
+    "name": "Xona nomi",
+    "branch": "Filial",
+    "capacity": "Sig'im",
+    "people": "kishi"
+  },
+  "courseCategories": {
+    "title": "Kurs toifalari",
+    "addCategory": "Toifa qo'shish",
+    "name": "Toifa nomi",
+    "branch": "Filial"
+  }
 }

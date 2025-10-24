@@ -14,7 +14,7 @@ export default function AddTeacherForm({
   value: TeacherFormValue;
   onChange: (v: TeacherFormValue) => void;
 }) {
-  const t = useTranslations('addTeacherForm');
+  const t = useTranslations('teachers');
 
   const set = (k: keyof TeacherFormValue) => (e: React.ChangeEvent<HTMLInputElement>) =>
     onChange({ ...value, [k]: e.target.value });
@@ -24,7 +24,7 @@ export default function AddTeacherForm({
 
   return (
     <Stack spacing={2}>
-      <TextField label={t('fullname')} value={value.fullname ?? ''} onChange={set('fullname')} />
+      <TextField label={t('fullName')} value={value.fullname ?? ''} onChange={set('fullname')} />
       <TextField label={t('phone')} value={value.phone ?? ''} onChange={set('phone')} />
       <TextField type="email" label={t('email')} value={value.email ?? ''} onChange={set('email')} />
 
@@ -58,7 +58,7 @@ export default function AddTeacherForm({
       {/* Optional fields; photo is usually uploaded via multipart elsewhere */}
       <TextField label={t('photo')} value={value.photo ?? ''} onChange={set('photo')} />
       <TextField
-        label={t('description')}
+        label={t('otherDetails')}
         value={value.description ?? ''}
         onChange={set('description')}
         multiline

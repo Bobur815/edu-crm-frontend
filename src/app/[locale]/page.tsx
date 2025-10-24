@@ -1,17 +1,21 @@
 // src/app/[locale]/page.tsx
+import { decodeJwt, roleToPanel } from '@/lib/api/auth';
+import { ACCESS_COOKIE } from '@/lib/tokens';
+import { JwtPayload } from '@/types';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
-import { ACCESS_COOKIE } from '@/lib/tokens';
-import { decodeJwt } from '@/lib/auth';
 
-export default function LocaleIndex({ params }: { params: { locale: string } }) {
+interface LocalePageProps {
+  params: { locale: string };
+}
+
+export default function LocalePage({ params }: LocalePageProps) {
   const token = cookies().get(ACCESS_COOKIE)?.value;
-  if (!token) redirect(`/${params.locale}/login`);
-
-  const role = (decodeJwt(token)?.role ?? '').toUpperCase();
-
-  if (role === 'STUDENT')  return redirect(`/${params.locale}/courses`);
-  if (role === 'TEACHER')  return redirect(`/${params.locale}/groups`);
-  // ✅ ADMIN / MANAGER: open admin panel
-  return redirect(`/${params.locale}/dashboard`);
+  if (!token) {
+    return redirect(`/${params.locale}/login`);
+  }
+  const payload = decodeJwt<JwtPayload>(token);
+  const panel = roleToPanel(payload?.role);
+  
+  return redirect(`/${params.locale}/${panel}`);
 }

@@ -7,28 +7,63 @@ import GroupIcon from '@mui/icons-material/Group';
 import PeopleIcon from '@mui/icons-material/People';
 import PersonIcon from '@mui/icons-material/Person';
 import DashboardIcon from '@mui/icons-material/Dashboard';
+import BusinessIcon from '@mui/icons-material/Business';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import SettingsIcon from '@mui/icons-material/Settings';
 import { useTranslations } from 'next-intl';
-
-
-
-
+import { useMe } from '@/components/hooks/useMe';
+import { roleToPanel } from '@/lib/api/auth';
 
 export default function Sidebar() {
-    const t = useTranslations('sidebar')
-    const nav = [
-        { href: '/', label: t('dashboard'), icon: <DashboardIcon fontSize="large" /> },
-        { href: '/students', label: t('students'), icon: <PeopleIcon fontSize="large" /> },
-        { href: '/teachers', label: t('teachers'), icon: <PersonIcon fontSize="large" /> },
-        { href: '/courses', label: t('courses'), icon: <SchoolIcon fontSize="large" /> },
-        { href: '/groups', label: t('groups'), icon: <GroupIcon fontSize="large" /> }
-    ];
+    const t = useTranslations('sidebar');
+    const { data: me } = useMe();
+    const userRole = roleToPanel(me?.role as string);
     
+    // Role-based navigation
+    const getNavItems = () => {
+        const baseUrl = `/${userRole}`;
+        
+        const commonItems = [
+            { href: baseUrl, label: t('dashboard'), icon: <DashboardIcon fontSize="large" /> },
+        ];
+        
+        switch (userRole) {
+            case 'admin':
+                return [
+                    ...commonItems,
+                    { href: `${baseUrl}/students`, label: t('students'), icon: <PeopleIcon fontSize="large" /> },
+                    { href: `${baseUrl}/teachers`, label: t('teachers'), icon: <PersonIcon fontSize="large" /> },
+                    { href: `${baseUrl}/groups`, label: t('groups'), icon: <GroupIcon fontSize="large" /> },
+                    { href: `${baseUrl}/branches`, label: t('branches'), icon: <BusinessIcon fontSize="large" /> },
+                    { href: `${baseUrl}/settings`, label: t('settings'), icon: <SettingsIcon fontSize="large" /> },
+                ];
+            case 'teacher':
+                return [
+                    ...commonItems,
+                    { href: `${baseUrl}/students`, label: t('students'), icon: <PeopleIcon fontSize="large" /> },
+                    { href: `${baseUrl}/courses`, label: t('courses'), icon: <SchoolIcon fontSize="large" /> },
+                    { href: `${baseUrl}/groups`, label: t('groups'), icon: <GroupIcon fontSize="large" /> },
+                    { href: `${baseUrl}/profile`, label: t('profile'), icon: <AccountCircleIcon fontSize="large" /> },
+                ];
+            case 'student':
+                return [
+                    ...commonItems,
+                    { href: `${baseUrl}/courses`, label: t('courses'), icon: <SchoolIcon fontSize="large" /> },
+                    { href: `${baseUrl}/groups`, label: t('groups'), icon: <GroupIcon fontSize="large" /> },
+                    { href: `${baseUrl}/profile`, label: t('profile'), icon: <AccountCircleIcon fontSize="large" /> },
+                ];
+            default:
+                return commonItems;
+        }
+    };
+    
+    const nav = getNavItems();
     const pathname = usePathname();
     return (
         <aside className="hidden md:block fixed inset-y-0 left-0 w-64 bg-white border-r border-gray-200">
             <div className="h-16 flex items-center px-5 border-b">
                 <div className="flex items-center justify-center w-full">
-                    <img src="./logo.svg" alt="logo" className="h-12" />
+                    <img src="/logo.svg" alt="logo" className="h-12" />
                 </div>
             </div>
             <nav className="py-3 space-y-1">

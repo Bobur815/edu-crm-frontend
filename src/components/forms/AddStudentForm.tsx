@@ -14,7 +14,7 @@ export default function AddStudentForm({
   value: StudentFormValue;
   onChange: (v: StudentFormValue) => void;
 }) {
-  const t = useTranslations('addStudentForm');
+  const t = useTranslations('students');
 
   const set = (k: keyof StudentFormValue) => (e: React.ChangeEvent<HTMLInputElement>) =>
     onChange({ ...value, [k]: e.target.value });
@@ -44,7 +44,7 @@ export default function AddStudentForm({
 
   return (
     <Stack spacing={2}>
-      <TextField label={t('fullname')} value={value.fullname ?? ''} onChange={set('fullname')} />
+      <TextField label={t('fullName')} value={value.fullname ?? ''} onChange={set('fullname')} />
       <TextField label={t('phone')} value={value.phone ?? ''} onChange={set('phone')} />
       <TextField type="email" label={t('email')} value={value.email ?? ''} onChange={set('email')} />
 
@@ -54,7 +54,6 @@ export default function AddStudentForm({
         value={value.gender ?? ''}
         onChange={(e) => onChange({ ...value, gender: (e.target.value || undefined) as Student['gender'] })}
       >
-        <MenuItem value="">{t('genderUnset') ?? '—'}</MenuItem>
         <MenuItem value="MALE">{t('genderMale')}</MenuItem>
         <MenuItem value="FEMALE">{t('genderFemale')}</MenuItem>
         <MenuItem value="OTHER">{t('genderOther')}</MenuItem>
